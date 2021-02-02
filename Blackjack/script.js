@@ -82,19 +82,24 @@ function showScore(activePlayer){
     else
     document.querySelector(activePlayer['scoreSpan']).textContent = activePlayer['score'];
 }
+function sleep(ms){
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
-function dealerLogic(){
+async function dealerLogic(){
     game['isStand']=true;
+    while(Dealer['score']<16 && game['isStand']=== true  && You['score']>=Dealer['score']){
     let card= randCard();
     showCard(card,Dealer);
     updateScore(card, Dealer);
     showScore(Dealer);
-    if(Dealer['score']>=16)
-    {
-        game['turnsOver']=true;
-        let winner= computWinner();
-    showResult(winner);
+    await sleep(1000);
     }
+    
+    game['turnsOver']=true;
+    let winner= computWinner();
+    showResult(winner);
+    
     
 }
 function computWinner(){
@@ -136,7 +141,7 @@ function showResult(winner)
     if(winner===You){
         document.querySelector('#wins').textContent= game['wins'];
         message= 'You Won!';
-        msgcolor= 'green';
+        msgcolor= 'rgb(0, 204, 0)';
         winSound.play();
     }
     else if(winner === Dealer)
@@ -151,10 +156,13 @@ function showResult(winner)
     else{
         document.querySelector('#draws').textContent= game['draws'];
         
-        message='Match Draw';
-        msgcolor='black';
+        message='Match Draw!';
+        msgcolor='rgb(255, 255, 51)';
     }
     document.querySelector('#blackjack').textContent=message;
     document.querySelector('#blackjack').style.color=msgcolor;
+    document.querySelector('#blackjack').style.fontWeight='bold';
+    
+
 }
 }

@@ -1,6 +1,11 @@
 body{
     background-color: rgb(33,38,1);
     color: #ffffff;
+   
+}
+h1{
+    font-family: 'Algerian';
+    
 }
 .container-1{
     /* border: 1px solid black; */
@@ -15,6 +20,7 @@ body{
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 10px;
+    
 }
 .flex-row3{
     display: flex;
