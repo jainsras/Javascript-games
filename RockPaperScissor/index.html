@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/style.css">  
+    <title>Javascript on steroids</title>
+</head>
+<body>
+    <div class= "container-1"><br>
+    <h2>Challenge 1: Your age in days</h2>
+    <div class="flex-box-container-1">
+    <div><button class="btn btn-primary" onclick="ageindays()">Click me</button>
+    </div>
+    <div><button class="btn btn-danger" onclick="reset()">Reset</button>
+    </div>
+</div>
+<div class= "flex-box-container-1">
+    <div id="flex-box-result"></div>
+</div>
+</div>
+<div class= "container-2"><br>
+    <h2>Challenge 2: Generate cats</h2>
+    <button class="btn btn-success"  onclick="generateCat()">Generate cats </button><br>
+    <br>
+    <div class="flex-box-container-2" id="flex-cat-gen"></div>
+</div>
+
+<div class= "container-3"><br>
+    <h2>Challenge 3: Rock, Paper, Scissors</h2>
+    <div class="flex-box-rps" id="flex-box-rps-div">
+        <img id="rock" src="https://previews.123rf.com/images/julinzy/julinzy1310/julinzy131000173/23262897-hand-sign-of-rock-paper-scissors-game-isolated-vector-on-white-background.jpg" alt="rock" height="150" width="150" onclick="rpsgame(this)">
+        <img id="paper" src="https://previews.123rf.com/images/julinzy/julinzy1310/julinzy131000180/23262904-hand-sign-of-rock-paper-scissors-game-isolated-vector-on-white-background.jpg" alt="paper" height="150" width="150" onclick="rpsgame(this)">
+        <img id="scissors" src="https://previews.123rf.com/images/julinzy/julinzy1310/julinzy131000181/23262905-hand-sign-of-rock-paper-scissors-game-isolated-vector-on-white-background.jpg" alt="scissors" height="150" width="150" onclick="rpsgame(this)">
+    </div>
+    <div><button class="btn btn-danger" onclick="resetgame()">Reset</button></div><br>
+</div>
+<div class= "container-4"><br>
+    <h2 id="change-color">Challenge4: Change the color of all buttons</h2><br>
+    <div class="flex-box-color">
+        <form action="">
+            <select name="backdrop" id="background" onchange="colorchange(this)">
+               <option value="none">None</option>
+                <option value="random" >Random</option>
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="yellow">Yellow</option>
+                <option value="reset">Reset</option>
+            </select>
+           
+        </form>
+        <button class="btn btn-primary">Linkedin</button>
+        <button class="btn btn-danger">Gmail</button>
+        <button class="btn btn-success">Github</button>
+        <button class="btn btn-warning">Yahoo</button>
+        <button class="btn btn-info">Twitter</button>
+        
+
+        
+   
+</div><br><br>
+</div>
+<script src= "static/js/script.js"></script>
+</body>
+</html>
